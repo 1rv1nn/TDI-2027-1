@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>song</title>
+  <link rel="stylesheet" href="../css/estilo2.css">
+</head>
+<body>
+  <header class="header-container">
+    <!--  King of pop -->
+    <a class="header-link" href="michael_jackson.html">
+    <div class="header-section">
+      <img src="../images/king_pop.jpg" alt="King of pop" class="header-img">
+      <span class="header-title">King of pop</span>
+    </div>
+    </a>
+
+    <!-- Queen of pop -->
+    <a class="header-link" href="madonna.html">
+    <div class="header-section">
+      <img src="../images/queen_pop.jpg" alt="Queen of pop" class="header-img">
+      <span class="header-title">Queen of pop</span>
+    </div>
+    </a>
+  </header>
+
+  <!-- Contenedor principal estilo marco exterior -->
+  <div class="detail-container">
+    
+    <!-- Lado Izquierdo: Imagen -->
+    <div class="detail-image-box">
+      <img src="../images/dangerous.jpg" alt="Song Cover">
+      <div class="song-audio">
+        <audio controls preload="none">
+          <source src="../audio/Remember The Time.mp3" type="audio/mpeg">
+          
+        </audio>
+      </div>
+    </div>
+
+    <!-- Lado Derecho: Contenido de texto -->
+    <div class="detail-content">
+  
+      <!-- Bloque Song Meaning -->
+      <section class="detail-section">
+        <h2>Song meaning</h2>
+        <div class="text-body">
+          <p id="song-meaning">Pulsa el botón para generar un análisis de la canción con Gemini.</p>
+          <div class="analysis-controls">
+            <label for="gemini-api-key">Gemini API key</label>
+            <input id="gemini-api-key" type="password" placeholder="Pega tu API key aquí" autocomplete="off">
+            <button id="analyze-song" type="button">Analizar canción</button>
+            <span id="analysis-status" role="status" aria-live="polite"></span>
+          </div>
+        </div>
+      </section>
+
+         <!-- Bloque Lyrics -->
+      <section class="detail-section">
+        <h2>Lyrics</h2>
+        <div id="song-lyrics" class="text-body">
+I don't know, bet you wanna try
+Every time you see
+Do you remember
+When we fell in love?
+We were young and innocent then
+Do you remember
+How it all began?
+It just seemed like heaven, so why did it end?
+Do you remember (I bet you remember)
+Back in the fall? (I bet you remember)
+We'd be together all day long (I bet you remember)
+(I bet you remember)
+Do you remember (I bet you remember)
+Us holding hands? (I bet you remember)
+In each other's eyes, we'd stare (I bet you remember)
+(I bet) tell me
+Do you remember the time
+When we fell in love?
+Do you remember the time
+(When we first met, girl?)
+Do you remember the time (oh, I)
+When we fell in love?
+Do you remember the time?
+Do you remember
+How we used to talk?
+You know
+We'd stay on the phone at night 'til dawn
+Do you remember
+All the things we said?
+Like, "I love you so, " "I'll never let you go"
+Do you remember (I bet you remember)
+Back in the spring? (I bet you remember)
+Every morning birds would sing (I bet you remember)
+(I bet you remember)
+Do you remember (I bet you remember)
+Those special times? (I bet you remember)
+They'll just go on and on (I bet you remember)
+In the back of my mind
+Do you remember the time (oh, I)
+When we fell in love?
+Do you remember the time (when we first met, girl?)
+Do you remember the time (oh, I)
+When we fell in love?
+Do you remember the time?
+Those sweet memories
+Will always be dear to me
+And girl, no matter what was said
+I will never forget what we had
+Now, baby
+Do you remember the time (do you remember?)
+When we fell in love?
+Do you remember the time (when we first met, girl?)
+Do you remember the time (oh, I)
+When we fell in love?
+Do you remember the time?
+(Remember, my baby)
+Do you remember the time ('cause I remember)
+When we fell in love?
+Do you remember the time? (All in my mind, girl)
+Do you remember the time (oh, I)
+When we fell in love?
+Do you remember the time?
+(Remember, my baby)
+Remember the time (woo)
+Remember the time (do you remember, girl?)
+Remember the time (on the phone, you and me)
+Remember the time ('til dawn, 'til three)
+(What about us, girl?)
+Remember the time
+(Do you? Do you? Do you? Do you? Do you?)
+Remember the time
+(In the park, on the beach)
+Remember the time (you and me in Spain)
+(What about-, what about-)
+Remember the time
+Remember the time (ooh, in the park)
+Remember the time (after dark)
+(Do you? Do you? Do you?)
+Remember the time (Do you? Do you? Do you? Do you?)
+Remember the time (yeah, yeah, woo)
+Remember the time (remember the time)</p>
+        </div>
+      </section>
+
+    </div>
+
+  </div>
+
+  <script type="module" src="../js/script.js"></script>
+</body>
+</html>

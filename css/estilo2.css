@@ -1,0 +1,196 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #eef0f2;
+  font-family: sans-serif;
+  overflow-y: auto;
+}
+
+/* --- HEADER --- */
+.header-container {
+  display: flex;
+  width: 100%;
+  border-bottom: 2px solid #000;
+  background-color: #fff;
+  flex-shrink: 0; /* Mantiene su tamaño fijo arriba */
+}
+
+.header-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 24px;
+}
+
+.header-link {
+  flex: 1;
+  display: flex;
+  color: inherit;
+  text-decoration: none;
+}
+
+.header-section:first-child {
+  border-right: 2px solid #000;
+}
+
+.header-img {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid #000;
+}
+
+.header-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+/* Contenedor principal que llena toda la pantalla */
+.detail-container {
+  flex: 1;
+  width: 100%;
+  min-height: calc(100vh - 74px);
+  height: auto;
+  display: flex;
+  gap: 32px;
+  padding: 24px;
+  background-color: #ffffff;
+  
+  border-radius: 14px;
+}
+
+/* Lado Izquierdo: La imagen se ajusta al alto total disponible */
+.detail-image-box {
+  height: min(70vh, 640px);
+  aspect-ratio: 1 / 1; /* Mantiene la caja cuadrada o quítalo si quieres que sea rectangular */
+  border: 3px solid #000000;
+  border-radius: 10px;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-image-box img {
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  flex: 1;
+  object-fit: cover;
+  display: block;
+}
+
+.song-audio {
+  flex-shrink: 0;
+  padding: 10px;
+  background: #fff;
+  color: #000;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.song-audio audio {
+  display: block;
+  width: 100%;
+  margin-top: 6px;
+}
+
+.apple-music-link {
+  display: block;
+  margin-top: 8px;
+  padding: 8px 10px;
+  border-radius: 4px;
+  color: #fff;
+  background: #e11d48;
+  font-size: 0.85rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+.apple-music-link:hover,
+.apple-music-link:focus-visible {
+  background: #be123c;
+}
+
+/* Lado Derecho: Textos distribuidos en toda la altura */
+.detail-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Mantiene Lyrics arriba y Song meaning abajo */
+  gap: 20px;
+  height: 100%;
+  overflow-y: auto; /* Permite scroll solo en el texto si la letra es muy larga */
+}
+
+.detail-section h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 12px;
+}
+
+.detail-section .text-body {
+  white-space: pre-line;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333333;
+}
+
+.analysis-controls {
+  display: grid;
+  gap: 8px;
+  margin-top: 16px;
+  max-width: 520px;
+}
+
+.analysis-controls label {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.analysis-controls input,
+.analysis-controls textarea,
+.analysis-controls button {
+  min-height: 40px;
+  padding: 8px 12px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  font: inherit;
+}
+
+.analysis-controls button {
+  color: #fff;
+  background: #000;
+  cursor: pointer;
+}
+
+.analysis-controls button:disabled {
+  cursor: wait;
+  opacity: 0.6;
+}
+
+#analysis-status {
+  min-height: 1.3em;
+  font-size: 0.9rem;
+}
+
+#song-lyrics-input {
+  width: 100%;
+  min-height: 280px;
+  padding: 12px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  resize: vertical;
+  font: inherit;
+  line-height: 1.5;
+}

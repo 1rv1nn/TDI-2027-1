@@ -1,0 +1,131 @@
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #eef0f2;
+  font-family: sans-serif;
+  overflow-y: auto;
+}
+
+/* --- HEADER --- */
+.header-container {
+  display: flex;
+  width: 100%;
+  border-bottom: 2px solid #000;
+  background-color: #fff;
+  flex-shrink: 0; /* Mantiene su tamaño fijo arriba */
+}
+
+.header-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 24px;
+}
+
+.header-link {
+  flex: 1;
+  display: flex;
+  color: inherit;
+  text-decoration: none;
+}
+
+.header-section:first-child {
+  border-right: 2px solid #000;
+}
+
+.header-img {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid #000;
+}
+
+.header-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+/* --- GRID QUE LLENA EL ESPACIO RESTANTE --- */
+.song-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columnas iguales */
+  grid-auto-rows: 340px;
+  gap: 20px;
+  padding: 24px;
+}
+
+.song-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border: 3px solid #000;
+  border-radius: 8px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+
+
+/* Contenedor principal de la tarjeta */
+.song-card {
+  display: flex !important;
+  flex-direction: column !important; /* Obliga a apilar de arriba a abajo */
+  align-items: center !important;
+  justify-content: flex-start !important;
+  
+  width: 280px;            /* Ajusta el tamaño deseado */
+  height: 340px;           /* Ajusta el tamaño deseado */
+  padding: 14px;           /* Margen interno parejo */
+  box-sizing: border-box !important;
+  
+  background-color: #ffffff;
+  border: 4px solid #000000;
+  border-radius: 12px;
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+/* Efecto al pasar el cursor por encima */
+.song-card:hover {
+  transform: translateY(-6px) scale(1.02); /* Se eleva y crece ligeramente */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra de elevación */
+}
+
+/* Contenedor de la imagen (ocupa todo el espacio superior) */
+.card-image-box {
+  width: 100% !important;
+  flex: 1 1 auto !important; /* Llena todo el alto disponible */
+  min-height: 0 !important;  /* Evita desbordamiento en Flexbox */
+  border: 2px solid #000000; /* Marco interno como el boceto */
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* La imagen cubre todo el recuadro sin deformarse */
+.card-image-box img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important; /* Cubre 100% el contenedor */
+  display: block !important;
+}
+
+/* Texto ubicado debajo */
+.card-title {
+  display: block !important;
+  width: 100% !important;
+  margin-top: 10px !important;
+  text-align: center !important;
+  font-family: sans-serif;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #000000;
+  flex-shrink: 0 !important;
+}
