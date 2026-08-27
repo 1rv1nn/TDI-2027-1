@@ -1,15 +1,10 @@
-# Sitio Web Pop
+# TDI 2027-1 
 
-Sitio web que integra un LLM (gemini-3.6) para analizar y explicar el significado de una canción pop.
+## Laboratorio y Teoria
 
-## Ejecución
+- monmm
+- 1rv1nn
 
-Basta con tener la extensión Live Server y activarla.
-
-## Capturas
-
-![Captura de la página principal](images/ss2.png)
-
-![Captura de la página de canción](images/ss3.png)
-
-
+Este repositorio almacena programas realizados en las sesiones de laboratorio y teoria.
+Para acceder a cada uno de ellos debes ingresar a los directorios que buscas y leer el 
+respectivo README para levantar el programa. 
