@@ -1,0 +1,6 @@
+127.0.0.1 - - [02/Sep/2026:11:29:07 -0600] "GET /cargocpc/index.html HTTP/1.1" 200 124
+0:0:0:0:0:0:0:1 - - [02/Sep/2026:11:29:28 -0600] "GET /app/ HTTP/1.1" 200 3004
+0:0:0:0:0:0:0:1 - - [02/Sep/2026:11:29:28 -0600] "GET /app/css/estilo1.css HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [02/Sep/2026:11:29:31 -0600] "GET /app/html/remember_time.html HTTP/1.1" 404 795
+0:0:0:0:0:0:0:1 - - [02/Sep/2026:11:29:36 -0600] "GET /app/html/everybody.html HTTP/1.1" 404 791
+0:0:0:0:0:0:0:1 - - [02/Sep/2026:11:29:38 -0600] "GET /app/html/papa_dont_preach.html HTTP/1.1" 404 798
