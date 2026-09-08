@@ -1,4 +1,4 @@
-# Sitio Web Pop
+# Pop Site
 
 Sitio web que integra un LLM (gemini-3.6) para analizar y explicar el significado de una canción pop.
 
