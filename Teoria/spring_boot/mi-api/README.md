@@ -4,7 +4,7 @@
 
   - Mediante vsCode instalar las extensiones `Extension Pack for Java` y `Spring Boot Extension Pack`
   - Generar el proyecto con Spring Initializr
-  - Seleccionar depeendencia `Spring Web (spring-boot-starter-web).`
+  - Seleccionar dependencia `Spring Web (spring-boot-starter-web).`
 
 ## Levantamiento 
 
@@ -14,4 +14,12 @@
 
     `./mvnw spring-boot:run`
 
-## Debugear    
+   Abre tu navegador o una pestaña de pruebas HTTP y accede a:
+
+  - http://localhost:8080/ 
+
+## Depuración  
+
+  `./mvnw spring-boot:run -e`
+
+  `./mvnw spring-boot:run -X`
