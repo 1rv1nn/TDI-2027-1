@@ -8,11 +8,18 @@
 
 ## Levantamiento 
 
-  Desde el directorio donde se ubica archivo principal, el que tiene la anotación @SpringBootApplication
+  Desde el directorio raiz
 
   - Utilizando el comando:
 
     `./mvnw spring-boot:run`
+
+  - o el comando:
+  
+    `./mvnw clean spring-boot:run   `
+
+ Tambien puedes levantar la aplicación desde archivo principal, el que tiene la anotación @SpringBootApplication   
+
 
    Abre tu navegador o una pestaña de pruebas HTTP y accede a:
 
