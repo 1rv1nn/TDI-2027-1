@@ -1,0 +1,10 @@
+127.0.0.1 - - [17/Sep/2026:08:29:02 -0600] "GET /cargocpc/index.html HTTP/1.1" 200 124
+0:0:0:0:0:0:0:1 - - [17/Sep/2026:08:29:09 -0600] "GET /mvc-app/pop HTTP/1.1" 200 4477
+0:0:0:0:0:0:0:1 - - [17/Sep/2026:08:29:10 -0600] "GET /mvc-app/css/estilo1.css HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [17/Sep/2026:08:29:10 -0600] "GET /favicon.ico HTTP/1.1" 404 683
+0:0:0:0:0:0:0:1 - - [17/Sep/2026:08:29:17 -0600] "GET /mvc-app/pop?filtro=Michael+Jackson HTTP/1.1" 200 3213
+0:0:0:0:0:0:0:1 - - [17/Sep/2026:08:29:32 -0600] "POST /mvc-app/pop HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [17/Sep/2026:08:29:32 -0600] "GET /mvc-app/pop?agregada=true HTTP/1.1" 200 4809
+0:0:0:0:0:0:0:1 - - [17/Sep/2026:08:33:53 -0600] "GET /mvc-app/pop?filtro=like+a+virgin HTTP/1.1" 200 2210
+0:0:0:0:0:0:0:1 - - [17/Sep/2026:08:42:14 -0600] "POST /mvc-app/pop HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [17/Sep/2026:08:42:14 -0600] "GET /mvc-app/pop?agregada=true HTTP/1.1" 200 5073
