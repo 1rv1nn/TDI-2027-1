@@ -33,7 +33,8 @@
 
 ## Arquitectura en Capas
 
-Separación de responsabilidades en niveles independientes del archivo EdadController.java 
+Separación de responsabilidades en niveles independientes del archivo `EdadController.java`
+ 
 Commit `4a0eab4`
 
   - Controller
