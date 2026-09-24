@@ -30,3 +30,12 @@
   `./mvnw spring-boot:run -e`
 
   `./mvnw spring-boot:run -X`
+
+## Arquitectura en Capas
+
+Separación de responsabilidades en niveles independientes del archivo EdadController.java 
+Commit `4a0eab4`
+
+  - Controller
+  - Service
+  - Repository
