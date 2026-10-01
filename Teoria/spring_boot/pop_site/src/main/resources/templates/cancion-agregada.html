@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canción agregada</title>
+  <link rel="stylesheet" th:href="@{/css/estilo1.css}">
+</head>
+<body class="song-form-page">
+  <main class="song-form">
+    <h1>Canción agregada</h1>
+    <p><strong>Artista:</strong> <span th:text="${artista}"></span></p>
+    <p><strong>Título:</strong> <span th:text="${titulo}"></span></p>
+    <p><strong>Álbum:</strong> <span th:text="${album}"></span></p>
+    <a class="back-link" th:href="@{/canciones}">Agregar otra canción</a>
+    <br>
+    <a class="back-link" th:href="@{/pop}">Volver al inicio</a>
+  </main>
+</body>
+</html>
