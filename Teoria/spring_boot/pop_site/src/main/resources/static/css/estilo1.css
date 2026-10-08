@@ -148,6 +148,7 @@ body {
 }
 
 .song-form select,
+.song-form input,
 .song-form button {
   width: 100%;
   min-height: 42px;
