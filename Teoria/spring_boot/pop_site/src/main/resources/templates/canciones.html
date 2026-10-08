@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Agregar canción</title>
   <link rel="stylesheet" th:href="@{/css/estilo1.css}">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 <body class="song-form-page">
   <main class="song-form">
@@ -28,18 +29,18 @@
       <label for="album">Álbum</label>
       <select id="album" name="album" required>
         <option value="">Selecciona un álbum</option>
-        <option value="Dangerous">Dangerous</option>
-        <option value="Triller">Triller</option>
-        <option value="Bad">Bad</option>
-        <option value="Invicible">Invicible</option>
-        <option value="OffTheWall">Off the Wall</option>
+        <option value="Dangerous" data-artista="Michael Jackson">Dangerous</option>
+        <option value="Triller" data-artista="Michael Jackson">Triller</option>
+        <option value="Bad" data-artista="Michael Jackson">Bad</option>
+        <option value="Invicible" data-artista="Michael Jackson">Invicible</option>
+        <option value="OffTheWall" data-artista="Michael Jackson">Off the Wall</option>
 
-        <option value="Madonna">Madonna</option>
-        <option value="True Blue">True Blue</option>
-        <option value="LikeVirgin">Like a Virgin</option>
-        <option value="LikePrayer">Like a Prayer</option>
-        <option value="Erotica">Erotica</option>
-        <option value="ConfessionsFloor">Confessions on a Dance Floor</option>
+        <option value="Madonna" data-artista="Madonna">Madonna</option>
+        <option value="True Blue" data-artista="Madonna">True Blue</option>
+        <option value="LikeVirgin" data-artista="Madonna">Like a Virgin</option>
+        <option value="LikePrayer" data-artista="Madonna">Like a Prayer</option>
+        <option value="Erotica" data-artista="Madonna">Erotica</option>
+        <option value="ConfessionsFloor" data-artista="Madonna">Confessions on a Dance Floor</option>
 
       </select>
 
@@ -50,7 +51,29 @@
         Ver canciones registradas
     </a>
 
-    
   </main>
+
+  <script>
+    $(function () {
+      const $artista = $("#artista");
+      const $album = $("#album");
+      const $opcionesAlbum = $album.find("option").not(":first");
+
+      function filtrarAlbumes() {
+        const artistaSeleccionado = $artista.val();
+
+        $album.val("");
+        $opcionesAlbum.each(function () {
+          const coincide = $(this).data("artista") === artistaSeleccionado;
+          $(this).prop("disabled", !coincide);
+        });
+
+        $album.prop("disabled", !artistaSeleccionado);
+      }
+
+      $artista.on("change", filtrarAlbumes);
+      filtrarAlbumes();
+    });
+  </script>
 </body>
 </html>

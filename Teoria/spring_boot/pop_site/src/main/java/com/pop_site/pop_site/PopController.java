@@ -23,11 +23,10 @@ public PopController(CancionRepository cancionRepository) {
 
 
     private static final Set<String> ARTISTAS = Set.of("Michael Jackson", "Madonna");
-    private static final Set<String> ALBUMES = Set.of(
-            "Dangerous", "Triller", "Bad", "Invicible", "OffTheWall",
-            "Madonna", "True Blue", "LikeVirgin", "LikePrayer",
-            "Erotica", "ConfessionsFloor");
-
+    private static final Map<String, Set<String>> ALBUMES_POR_ARTISTA = Map.of(
+            "Michael Jackson", Set.of("Dangerous", "Triller", "Bad", "Invicible", "OffTheWall"),
+            "Madonna", Set.of("Madonna", "True Blue", "LikeVirgin", "LikePrayer",
+                    "Erotica", "ConfessionsFloor"));
     private static final Map<String, String> CANCIONES = Map.ofEntries(
             Map.entry("like_virgin", "like_virgin.html"),
             Map.entry("remember_time", "remember_time.html"),
@@ -62,7 +61,9 @@ public PopController(CancionRepository cancionRepository) {
             @RequestParam String titulo,
             @RequestParam String album) {
 
-        if (!ARTISTAS.contains(artista) || titulo.isBlank() || !ALBUMES.contains(album)) {
+        if (!ARTISTAS.contains(artista)
+                || titulo.isBlank()
+                || !ALBUMES_POR_ARTISTA.get(artista).contains(album)) {
             throw new ResponseStatusException(
                     HttpStatus.BAD_REQUEST,
                     "Los datos de la canción no son válidos");

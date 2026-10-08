@@ -49,11 +49,7 @@ docker compose down -v
 Si se modifica el PopController es necesario recrear el contenedor sin reconstruir la imagen.
 
 ```
-docker compose down
+docker compose restart app
 ```
 
-```
-docker compose up -d --force-recreate app
-```
 
-Con ello se esta reutilizando la imagen de `Meaven`.
