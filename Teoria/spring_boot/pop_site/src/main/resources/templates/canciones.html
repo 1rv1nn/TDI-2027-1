@@ -10,7 +10,7 @@
   <main class="song-form">
     <h1>Agregar una canción</h1>
 
-    <form th:action="@{/pop}" method="post">
+    <form th:action="@{/canciones}" method="post">
       <label for="artista">Artista</label>
       <select id="artista" name="artista" required>
         <option value="">Selecciona un artista</option>
@@ -46,7 +46,11 @@
       <button type="submit">Agregar canción</button>
     </form>
 
-    <a class="back-link" th:href="@{/pop}">Volver al inicio</a>
+    <a th:href="@{/canciones/registradas}" class="btn btn-secondary">
+        Ver canciones registradas
+    </a>
+
+    
   </main>
 </body>
 </html>

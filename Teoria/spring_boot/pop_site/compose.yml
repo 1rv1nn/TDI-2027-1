@@ -30,7 +30,7 @@ services:
       SPRING_WEB_RESOURCES_STATIC_LOCATIONS: file:/app/src/main/resources/static/
     ports:
       - "8080:8080"
-    command: mvn spring-boot:run
+    command: mvn clean spring-boot:run
     volumes:
       - .:/app
       - maven-cache:/root/.m2

@@ -9,6 +9,12 @@ docker compose build
 docker compose up -d
 ```
 
+Si se desea revisar los logs
+
+```
+docker compose logs -f app
+```
+
 
 Esto levanta:
 - PostgreSQL en el servicio `db`
@@ -36,3 +42,18 @@ docker compose down
 ```bash
 docker compose down -v
 ```
+
+
+## Observaciones
+
+Si se modifica el PopController es necesario recrear el contenedor sin reconstruir la imagen.
+
+```
+docker compose down
+```
+
+```
+docker compose up -d --force-recreate app
+```
+
+Con ello se esta reutilizando la imagen de `Meaven`.

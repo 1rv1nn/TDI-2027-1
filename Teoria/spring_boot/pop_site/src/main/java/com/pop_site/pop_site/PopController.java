@@ -1,5 +1,6 @@
 package com.pop_site.pop_site;
 
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -22,7 +23,10 @@ public PopController(CancionRepository cancionRepository) {
 
 
     private static final Set<String> ARTISTAS = Set.of("Michael Jackson", "Madonna");
-    private static final Set<String> ALBUMES = Set.of("Dangerous", "Holiday");
+    private static final Set<String> ALBUMES = Set.of(
+            "Dangerous", "Triller", "Bad", "Invicible", "OffTheWall",
+            "Madonna", "True Blue", "LikeVirgin", "LikePrayer",
+            "Erotica", "ConfessionsFloor");
 
     private static final Map<String, String> CANCIONES = Map.ofEntries(
             Map.entry("like_virgin", "like_virgin.html"),
@@ -47,30 +51,35 @@ public PopController(CancionRepository cancionRepository) {
         return "redirect:/html/" + pagina;
     }
 
-    // Antes se accedía directo a canciones.jsp
-    @GetMapping("/canciones")
-    public String formulario() {
-        return "canciones"; // templates/canciones.html
+    @GetMapping({"/canciones", "/canciones/nueva"})
+    public String mostrarFormulario() {
+        return "canciones";
     }
 
-    // Era doPost
-    @PostMapping("/pop")
-    public String agregar(@RequestParam String artista,
-                          @RequestParam String titulo,
-                          @RequestParam String album,
-                          Model model) {
+    @PostMapping("/canciones")
+    public String agregarCancion(
+            @RequestParam String artista,
+            @RequestParam String titulo,
+            @RequestParam String album) {
 
         if (!ARTISTAS.contains(artista) || titulo.isBlank() || !ALBUMES.contains(album)) {
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Los datos de la canción no son válidos");
+            throw new ResponseStatusException(
+                    HttpStatus.BAD_REQUEST,
+                    "Los datos de la canción no son válidos");
         }
 
-        Cancion guardada = cancionRepository.save(new Cancion(artista, titulo, album));
+        Cancion cancion = new Cancion(artista, titulo, album);
+        cancionRepository.save(cancion);
 
-        model.addAttribute("artista", guardada.getArtista());
-        model.addAttribute("titulo", guardada.getTitulo());
-        model.addAttribute("album", guardada.getAlbum());
+        return "redirect:/canciones/registradas";
+    }
 
+    @GetMapping("/canciones/registradas")
+    public String mostrarCanciones(Model model) {
+        List<Cancion> canciones = cancionRepository.findAll();
 
-        return "cancion-agregada"; // templates/cancion-agregada.html
+        model.addAttribute("canciones", canciones);
+
+        return "lista-canciones";
     }
 }
